@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tomás Udler Portfolio</title>
+  <style>
+    /* Fuentes y colores */
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+    :root {
+      --background: #ffffff;
+      --text: #111111;
+      --accent: #1e90ff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Space Mono', monospace;
+      background: var(--background);
+      color: var(--text);
+      display: flex;
+      min-height: 100vh;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 120px;
+      height: 100%;
+      background: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 2rem;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--accent);
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      transform: scale(1.1);
+    }
+
+    main {
+      margin-left: 140px;
+      padding: 2rem;
+      width: 100%;
+      animation: fadeIn 1.5s ease;
+    }
+
+    section {
+      margin-bottom: 3rem;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 1s forwards;
+    }
+
+    section:nth-child(1) { animation-delay: 0.3s; }
+    section:nth-child(2) { animation-delay: 0.6s; }
+    section:nth-child(3) { animation-delay: 0.9s; }
+    section:nth-child(4) { animation-delay: 1.2s; }
+
+    h1, h2 {
+      margin-bottom: 1rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: row;
+        height: auto;
+        width: 100%;
+        padding: 1rem;
+        justify-content: center;
+      }
+      main {
+        margin-left: 0;
+        margin-top: 60px;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#intro">Inicio</a>
+    <a href="#proyectos">Audiovisuales</a>
+    <a href="#visuales">Visuales en Vivo</a>
+    <a href="#sobre">Sobre Mí</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <main>
+    <section id="intro">
+      <h1>Tomás Udler</h1>
+      <p>Estudiante de Diseño de Imagen y Sonido. Me especializo en proyectos audiovisuales y visuales en vivo combinando tecnologías actuales con técnicas analógicas como CCTV para lograr una estética única.</p>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos Audiovisuales</h2>
+      <p>Cortometrajes, documentales, asistencia de cámara y dirección. Trabajo integral en producción tradicional con foco narrativo y estético.</p>
+    </section>
+
+    <section id="visuales">
+      <h2>Visuales en Vivo</h2>
+      <p>Visuales generativos, VJing y contenido para shows. Trabajo con TouchDesigner, Vsynth, Resolume y técnicas mixtas analógico/digital.</p>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre Mí</h2>
+      <p>Exploro los cruces entre arte, tecnología y experiencia visual. Busco expandirme en espacios interactivos y proyectos inmersivos.</p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Email: tomas.udler@email.com<br />Instagram: @tomasudler</p>
+    </section>
+  </main>
+</body>
+</html>
